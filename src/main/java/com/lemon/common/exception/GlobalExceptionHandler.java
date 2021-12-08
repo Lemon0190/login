@@ -35,11 +35,6 @@ public class GlobalExceptionHandler {
         return Result.fail(objectError.getDefaultMessage());
     }
 
-    /**
-     * 断言异常
-     * @param e
-     * @return
-     */
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(value = IllegalArgumentException.class)
     public Result handler(IllegalArgumentException e){
